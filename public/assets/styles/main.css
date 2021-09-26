@@ -1,0 +1,15 @@
+* {
+	box-sizing: border-box;
+	color: inherit;
+}
+
+html,
+body {
+	margin: 0px;
+	background: #222831;
+	color: #f1f1f1;
+}
+
+#main {
+	margin: 25px 150px;
+}
