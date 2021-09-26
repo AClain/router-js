@@ -6,7 +6,7 @@ export class Router {
 	parameters = [];
 
 	/**
-	 * Instanctiate a new Router.
+	 * Create a new Router.
 	 */
 	constructor() {
 		this.url = new URL(window.location.href);
@@ -19,21 +19,29 @@ export class Router {
 	 * @return {URL} url - The current url as an URL object.
 	 */
 	getUrl = () => {
-		console.log(typeof this.url);
 		return this.url;
 	};
 
+	/**
+	 * Get all the routes.
+	 * @return {object} routes - The routes given upon initiation.
+	 */
 	getRoutes = () => {
 		return this.routes;
 	};
 
+	/**
+	 * Get all the routes.
+	 * @return {array} parmeters - The query parameters of the current pathname.
+	 */
 	getParameters = () => {
 		return this.parameters;
 	};
 
 	// Core functions
+
 	/**
-	 * Indicates the routes the router will try to match against the current url.
+	 * Initiate the router with the given routes.
 	 *
 	 * @param {array} routes - Array or routes the router will test against the current url.
 	 * @param {string} rootElement - A string compatible with querySelector, targeting the element in which HTML will be rendered.
@@ -49,6 +57,11 @@ export class Router {
 		this.routes = routes;
 	};
 
+	/**
+	 *
+	 * @param {*} pathToMatch
+	 * @returns
+	 */
 	match = (pathToMatch) => {
 		if (pathToMatch[0] !== "/") {
 			pathToMatch = "/" + pathToMatch;

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+
 * {
 	box-sizing: border-box;
 	color: inherit;
@@ -12,4 +14,19 @@ body {
 
 #main {
 	margin: 25px 150px;
+}
+
+pre {
+	background: #f1f1f1;
+	color: #222831;
+	padding: 15px;
+	border-radius: 3px;
+}
+
+code {
+	font-family: "Ubuntu Mono", monospace;
+	background: #f1f1f1;
+	color: #222831;
+	padding: 3px;
+	border-radius: 3px;
 }
